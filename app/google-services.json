@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "608032405614",
+    "project_id": "svluna-40bed",
+    "storage_bucket": "svluna-40bed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:608032405614:android:e2b05d6792f81e817b0e7f",
+        "android_client_info": {
+          "package_name": "com.laz.svluna"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "608032405614-fvg7cd93jip6ceh8pvi19n5jb74l8ddc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_5E_5lfzcvOrO2tYgiMG_ZOvn0nEN0sw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "608032405614-fvg7cd93jip6ceh8pvi19n5jb74l8ddc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
