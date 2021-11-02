@@ -8,9 +8,12 @@ import android.content.Intent;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
-import androidx.core.app.NotificationCompat;
 import android.util.Log;
 
+import androidx.core.app.NotificationCompat;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
@@ -119,7 +122,13 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
      * @param token The new token.
      */
     private void sendRegistrationToServer(String token) {
-        // TODO: Implement this method to send token to your app server.
+        // Send token to FCM Realtime datatabase as a Device object.
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("mobile_devices");
+        String device_id = android.os.Build.MODEL + android.os.Build.MANUFACTURER;
+        myRef.child(device_id).setValue(new Device(android.os.Build.MODEL,
+                android.os.Build.MANUFACTURER,
+                token));
     }
 
     /**
