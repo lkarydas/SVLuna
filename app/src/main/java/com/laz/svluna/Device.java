@@ -19,9 +19,6 @@ public class Device {
         this.model = model;
         this.manufacturer = manufacturer;
         this.token = token;
-        TimeZone tz = TimeZone.getTimeZone("EST");
-        DateFormat df = new SimpleDateFormat("yyyyMMdd'T'HHmm");
-        df.setTimeZone(tz);
-        this.timestamp = df.format(new Date());
+        this.timestamp = DateTimeManager.now();
     }
 }

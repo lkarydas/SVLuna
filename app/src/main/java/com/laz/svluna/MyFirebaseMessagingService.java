@@ -122,7 +122,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
      * @param token The new token.
      */
     private void sendRegistrationToServer(String token) {
-        // Send token to FCM Realtime datatabase as a Device object.
+        // Send token to FCM Realtime database as a Device object.
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("mobile_devices");
         String device_id = android.os.Build.MODEL + android.os.Build.MANUFACTURER;
